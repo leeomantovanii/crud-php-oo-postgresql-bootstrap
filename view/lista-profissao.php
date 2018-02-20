@@ -2,9 +2,11 @@
 require_once ("cabecalho.php");
 require_once ("../config/Conexao.php");
 require_once ("../model/ProfissaoDAO.php");
+
+header('Content-type: text/html; charset=ISO-8859-1');
 ?>
 
-<h3>Lista de Profissoes</h3>
+<h3>Lista de Profissões</h3>
 <table class="table table-striped table-bordered table-condensed ">
 	<thead>
 		<tr>
@@ -33,7 +35,8 @@ foreach ($profissoes as $profissao) :
 			</form>
 		</td>
 		<td>
-			<form action="../controller/RemoveProfissaoController.php" method="POST">
+			<form action="../controller/ProfissaoController.php" method="POST">
+				<input type="hidden" name="method" value="delete">
 				<input type="hidden" name="prof_id" value="<?= $profissao['prof_id']?>">
 				<button class="btn btn-danger">
 					<span class="glyphicon glyphicon glyphicon-trash" aria-hidden="true"></span>

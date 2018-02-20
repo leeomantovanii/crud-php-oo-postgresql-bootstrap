@@ -1,6 +1,11 @@
 <?php
 require_once("../view/cabecalho.php");
-require_once("../controller/CarregaProfissaoController.php");
+require_once("../controller/ProfissaoController.php");
+
+$pc = new ProfissaoController();
+$p = $pc->busca();
+
+header('Content-type: text/html; charset=ISO-8859-1');
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,8 +13,9 @@ require_once("../controller/CarregaProfissaoController.php");
 </head>
 <body>
 	<div class="container">
-		<h3>Atualiza Profissao</h3>
-		<form method="post" action="../controller/UpdProfissaoController.php">,
+		<h3>Atualiza Profissão</h3>
+		<form method="post" action="../controller/ProfissaoController.php">
+			<input type="hidden" name="method" value="atualiza">
 			<input type="hidden" name="prof_id" value="<?=$p->getProf_id()?>">
 			<div class="form-group">
 				<label>Nome</label>

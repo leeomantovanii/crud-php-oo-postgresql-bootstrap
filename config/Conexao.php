@@ -2,10 +2,12 @@
 
 class Conexao{
 	private $host = "localhost";
-	private $username = "root";
-	private $password ="leo251996";
-	private $database = "teste";
+	private $username = "postgres";
+	private $password ="leonardo";
+	private $database = "crud";
 	private $conexao = null;
+	
+
 
 	public function Conexao(){
 		$this->conectar();
@@ -16,10 +18,6 @@ class Conexao{
 	}
 
 	private function conectar(){
-		$this->conexao = mysqli_connect(
-			$this->host,
-			$this->username,
-			$this->password,
-			$this->database);
+	    $this->conexao = pg_connect("host=localhost port=5432 dbname=crud user=postgres password=leonardo") or die('Could not connect: ' . pg_last_error());
 	}
 }

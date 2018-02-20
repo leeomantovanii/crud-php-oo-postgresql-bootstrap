@@ -1,3 +1,7 @@
+<?php 
+header('Content-type: text/html; charset=ISO-8859-1');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +25,7 @@
 					<li><a href="/26-01-crud/view/adiciona-pessoa.php"> <span class="glyphicon glyphicon-plus"></span> Adicionar Pessoa</a></li>
 					<li><a href="/26-01-crud/view/adiciona-profissao.php"> <span class="glyphicon glyphicon-plus"></span> Adicionar Profissao</a></li>
 					<li><a href="/26-01-crud/view/lista-pessoa.php"> <span class="glyphicon glyphicon-th-list"></span> Lista de Pessoas</a></li>
-					<li><a href="/26-01-crud/view/lista-profissao.php"> <span class="glyphicon glyphicon-th-list"></span> Lista de Profissoes</a></li>
+					<li><a href="/26-01-crud/view/lista-profissao.php"> <span class="glyphicon glyphicon-th-list"></span> Lista de Profissões</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
